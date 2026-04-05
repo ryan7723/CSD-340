@@ -51,9 +51,11 @@ ul {
 }
 
 a {
+    color: black;
     text-decoration: none;
 }
 
 a:hover {
+    color: red;
     text-decoration: underline;
 }

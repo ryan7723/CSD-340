@@ -2,56 +2,55 @@
     width: 100%;
 }
 
-/* Center title /
 h1 {
     text-align: center;
 }
 
-/ Side-by-side layout /
 .row {
     display: flex;
     justify-content: space-between;
 }
 
-/ Left + Right boxes /
 .left, .right {
     width: 45%;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
 }
 
-/ Headings /
 h3 {
     font-weight: 500;
 }
 
-/ Lists /
 ol, ul {
     font-weight: 300;
     padding: 10px;
-}
-
-/ Ordered list styling /
-ol {
-    border: 1px solid red;
-    border-radius: 15px;
     list-style-position: inside;
 }
 
-/ Unordered list styling /
 ul {
     border: 1px dashed red;
     border-radius: 15px;
     list-style-type: upper-roman;
+    border: none;
 }
 
-/ Bottom link /
+ol {
+    border: none;
+}
+
 .bottom {
     width: 100%;
     margin-top: 60%;
     float: right;
     margin-bottom: 20px;
+    text-align: right;
 }
 
-/ Hover effect */
+a {
+    text-decoration: none;
+}
+
 a:hover {
     text-decoration: underline;
 }

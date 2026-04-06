@@ -18,10 +18,11 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #8B0000;
-}
-
 a:visited {
     color: #555;
+}
+
+a:hover {
+    color: #ff0000;
+    text-decoration: underline;
 }

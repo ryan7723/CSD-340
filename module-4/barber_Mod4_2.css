@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Center main title */
+h1 {
+    text-align: center;
+    color: rgba(200, 0, 0, 0.8); /* optional */
+}
+
+/* GRID LAYOUT */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+    gap: 20px;
+}
+
+/* Center titles */
+h3 {
+    text-align: center;
+    color: rgba(150, 0, 0, 0.8); /* optional */
+}
+
+/* Center images */
+figure {
+    text-align: center;
+}
+
+/* Style captions */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(100, 0, 0, 0.8); /* optional */
+}
+
+img {
+    width: 150px;
+    height: auto;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 9.3">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Ryan Barber">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSD 340 Development with HTML and CSS</title>
+
+    <script>
+        var firstWord = "calculations";
+        var secondWord = "worried";
+        var thirdWord = "destroy";
+        var fourthWord = "world";
+    </script>
+
+    <link rel="stylesheet" href="barber_mod2_2.css">
+</head>
+
+<body>
+
+<button type="button"
+        onclick="document.getElementById('word1').innerHTML = firstWord">
+    Reveal word 1
+</button>
+
+<button type="button"
+        onclick="document.getElementById('word2').innerHTML = secondWord">
+    Reveal word 2
+</button>
+
+<button type="button"
+        onclick="document.getElementById('word3').innerHTML = thirdWord">
+    Reveal word 3
+</button>
+
+<button type="button"
+        onclick="document.getElementById('word4').innerHTML = fourthWord">
+    Reveal word 4
+</button>
+
+<div id="container">
+
+    <h1>Assignment 9.3 – JavaScript - Part 1</h1>
+
+    <p>Oppenheimer: "Albert? When I came to you with those <span id="word1">__________</span>?"</p>
+
+    <p>Oppenheimer: "We were <span id="word2">________</span> that we'd start a chain reaction that
+        would <span id="word3">_________</span> the entire <span id="word4">_______</span>..."</p>
+
+    <p>Einstein: "I remember it well. What of it?"</p>
+
+    <p>Oppenheimer: "I believe we did."</p>
+
+    <hr>
+
+    <address>
+        <p><a href="https://www.bellevue.edu/" target="_blank">Bellevue University</a></p>
+        <p>1000 Galvin Road South</p>
+        <p>Bellevue, NE 68005</p>
+    </address>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTMl and CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+        }
+
+        .container {
+            width: 700px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        button:nth-of-type(1) {
+            background-color: green;
+        }
+
+        button:nth-of-type(2) {
+            background-color: red;
+        }
+
+        button:nth-of-type(3) {
+            background-color: blue;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 6px;
+            min-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>
+        Enter a task below and click "Add" to add it to the list.
+        You can click "Delete Last Entry" to remove the last item you entered.
+        Clicking sort will sort the list.
+    </p>
+
+    <input type="text" id="taskInput" placeholder="Enter a task...">
+
+    <button onclick="addTask()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="sortTasks()">Sort</button>
+
+    <div id="output"></div>
+
+    <a href="../module-3/Barber_Mod3_3.html">Return to Landing Page</a>
+</div>
+
+<script>
+    let tasks = [];
+
+    function addTask() {
+        let task = document.getElementById("taskInput").value;
+
+        if (task === "") {
+            alert("Please enter a task.");
+            return;
+        }
+
+        tasks.push(task);
+        alert("Item: " + task + " Added as Item " + tasks.length);
+
+        document.getElementById("taskInput").value = "";
+        displayTasks();
+    }
+
+    function deleteLastEntry() {
+        if (tasks.length === 0) {
+            alert("There are no items to delete.");
+            return;
+        }
+
+        let deletedTask = tasks.pop();
+        alert("Deleted item: " + deletedTask);
+
+        displayTasks();
+    }
+
+    function sortTasks() {
+        tasks.sort();
+
+        let output = document.getElementById("output");
+
+        output.innerHTML = "<h3>Sorted To Do List</h3>";
+
+        for (let i = 0; i < tasks.length; i++) {
+            output.innerHTML += (i +1) + ". " + tasks[i] + "<br>";
+        }
+
+        alert("The list has been sorted.");
+    }
+
+    function displayTasks() {
+        let output = document.getElementById("output");
+
+        output.innerHTML = "<h3>To Do List</h3>";
+
+        for (let i = 0; i < tasks.length; i++) {
+            output.innerHTML += tasks[i] + "<br>";
+        }
+    }
+</script>
+
+</body>
+</html>
